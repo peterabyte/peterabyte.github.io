@@ -1,0 +1,13 @@
+<div class="body-content-container">
+    <div ng-if="projectFound == true">
+        <div class="project-visit-source">Visit the source of this project <a href="{{project.repoUrl}}">here</a>.</div>
+        <div class="readme-content" data-project-id="{{projectId}}" data-render-project-readme></div>
+    </div>
+    <div ng-if="projectFound == false">
+        <div class="project-error">
+            <h1><span class="glyphicon glyphicon-alert"></span>&nbsp;404 Project not found!</h1>
+            <div class="project-error-solution">Please visit the <a href="/#/projects">projects</a> page to see the available projects. <span class="project-error-solution-or">OR</span></div>
+            <div class="project-error-solution">You might have found a broken link. Please try refreshing the page. If the issue persists then visit the <a href="/#/support">support</a> page and file a report.</div>
+        </div>
+    </div>
+</div>

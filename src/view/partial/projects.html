@@ -1,0 +1,14 @@
+<div class="body-content-container">
+    <h1>Projects</h1>
+    <div ng-repeat="(pKey, pVal) in config.projects" data-done>
+        <div class="project-description-container">
+            <div class="project-description-header">
+                <a href="/#/projects/{{pKey}}">{{pVal.title}}</a>
+            </div>
+            <div class="project-description-content" data-project-id="{{pKey}}" data-render-project-description></div>
+            <div class="project-description-footer">
+                <a href="/#/projects/{{pKey}}">Read more</a>&nbsp;&middot;&nbsp;<a href="{{pVal.repoUrl}}">Go to source</a>
+            </div>
+        </div>
+    </div>
+</div>
