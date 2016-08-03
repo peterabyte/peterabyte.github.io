@@ -22,6 +22,8 @@ The following libraries are used in the application.
 
 *[Bootstrap](http://getbootstrap.com/)*: HTML, CSS and JS framework for developing responsive, mobile first projects on the web.
 
+*[Bootswatch](https://bootswatch.com/)*: Bootswatch is a collection of open source themes for [Bootstrap](http://getbootstrap.com/).
+
 ### Dev dependencies
 
 The following libraries are used for the development of this project.

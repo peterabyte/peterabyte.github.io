@@ -1,7 +1,9 @@
 <div class="body-content-container">
     <div ng-if="projectFound == true">
-        <div class="project-visit-source">Visit the source of this project <a href="{{project.repoUrl}}">here</a>.</div>
-        <div class="readme-content" data-project-id="{{projectId}}" data-render-project-readme></div>
+        <div class="alert alert-info">Visit the source of this project <strong><a target="_blank" href="{{project.repoUrl}}">here</a></strong>.</div>
+        <div class="readme-content" data-project-id="{{projectId}}" data-render-project-readme>
+            <h4 class="text-center"><span class="glyphicon glyphicon-hourglass"></span> Loading...</h4>
+        </div>
     </div>
     <div ng-if="projectFound == false">
         <div class="project-error">

@@ -35,7 +35,7 @@ define(['angular',
         $routeProvider
             .when("/", {templateUrl: "src/view/partial/home.html", controller: "HomeCtrl", title: "Home"})
             .when("/home", {templateUrl: "src/view/partial/home.html", controller: "HomeCtrl", title: "Home"})
-            .when("/home/:id", {templateUrl: "src/view/partial/home.html", controller: "HomeCtrl", title: "Home"})
+            .when("/home/:code", {templateUrl: "src/view/partial/home.html", controller: "HomeCtrl", title: "Home"})
             .when("/projects", {templateUrl: "src/view/partial/projects.html", controller: "ProjectsCtrl", title: "Projects"})
             .when("/projects/:id", {templateUrl: "src/view/partial/project.html", controller: "ProjectCtrl", title: "Project"})
             .when("/support", {templateUrl: "src/view/partial/support.html", controller: "SupportCtrl", title: "Support"})
@@ -59,8 +59,8 @@ define(['angular',
 
     app.controller('HomeCtrl', function ($scope, $routeParams) {
         initCtrl();
-        if ($routeParams.id) {
-            $scope.welcomeCodeId = $routeParams.id;
+        if ($routeParams.code) {
+            $scope.welcomeCodeId = $routeParams.code;
         }
     });
 
@@ -147,10 +147,31 @@ define(['angular',
                     element.html(marked(atob(data.content)));
                     element.addClass('readme-content-loaded');
                 }).fail(function () {
+                    element.empty();
                     util.errorHandler.error('Failed to load project README!');
                 });
             }
         };
+    });
+
+    app.directive('renderProjectsBadge', function () {
+        return {
+            link: function (scope, element, attrs) {
+                var numberOfProjects = -1;
+                if (Object.keys) {
+                    numberOfProjects = Object.keys(config.projects).length;
+                }
+                if (numberOfProjects < 0) {
+                    numberOfProjects = 0;
+                    for (var p in config.projects) {
+                        if (config.projects.hasOwnProperty(p)) {
+                            numberOfProjects = numberOfProjects + 1;
+                        }
+                    }
+                }
+                element.html(numberOfProjects);
+           }
+       };
     });
 
     app.run(['$location', '$rootScope', function ($location, $rootScope) {

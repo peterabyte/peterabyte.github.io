@@ -1,14 +1,13 @@
 <div class="body-content-container">
     <h1>Projects</h1>
-    <div ng-repeat="(pKey, pVal) in config.projects" data-done>
-        <div class="project-description-container">
-            <div class="project-description-header">
-                <a href="/#/projects/{{pKey}}">{{pVal.title}}</a>
-            </div>
-            <div class="project-description-content" data-project-id="{{pKey}}" data-render-project-description></div>
-            <div class="project-description-footer">
-                <a href="/#/projects/{{pKey}}">Read more</a>&nbsp;&middot;&nbsp;<a href="{{pVal.repoUrl}}">Go to source</a>
-            </div>
+    <div ng-repeat="(pKey, pVal) in config.projects" class="panel panel-info project-item-panel" data-done>
+        <div class="panel-heading">
+            <a href="/#/projects/{{pKey}}">{{pVal.title}}</a>
+        </div>
+        <div class="panel-body" data-project-id="{{pKey}}" data-render-project-description>
+        </div>
+        <div class="panel-footer">
+            <a href="/#/projects/{{pKey}}">Read more</a>&nbsp;&middot;&nbsp;<a target="_blank" href="{{pVal.repoUrl}}">Go to source</a>
         </div>
     </div>
 </div>

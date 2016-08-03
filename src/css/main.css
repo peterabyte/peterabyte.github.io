@@ -5,7 +5,7 @@ body {
 
 .main-container {
     max-width: 66em;
-    min-width: 20em;
+    min-width: 16em;
     margin: 0 auto;
     display: block;
 }
@@ -66,6 +66,16 @@ a:active {
 
 .header-container .navbar {
     margin-bottom: 0;
+}
+
+a.navbar-brand {
+    text-transform: none;
+}
+
+.navbar-brand img {
+    display: inline-block;
+    padding-right: 7px;
+    margin-top: -4px;
 }
 
 /* footer */
@@ -142,18 +152,24 @@ a:active {
     font-size: 0.75em;
 }
 
+.project-item-panel .panel-heading a {
+    color: white;
+    font-size: 1.25em;
+}
+
+.project-item-panel .panel-footer a {
+    color: grey;
+}
+
 /* home page */
 
 .home-container {
-    border: 1px solid #1E90FF;
-    background-color: #1E90FF;
     padding: 2em 1em;
     text-align: center;
 }
 
 .home-title {
     font-size: 3em;
-    color: white;
     font-weight: bold;
     margin-bottom: 15px;
 }
@@ -161,7 +177,7 @@ a:active {
 .welcome-code pre {
     display: inline-block;
     overflow-x: auto;
-    max-width: 90%;
+    max-width: 100%;
     background-color: white;
     border: 1px solid #D8D8D8;
     border-radius: 5px;
@@ -222,4 +238,8 @@ a:active {
 
 .readme-content pre code {
     white-space: inherit;
+}
+
+.readme-content h1, .readme-content h2, .readme-content h3, .readme-content h4 {
+    word-wrap: break-word;
 }

@@ -6,17 +6,21 @@ define([], function () {
             {
                 name: "home",
                 url: "/#/home",
-                text: "Home"
+                text: "Home",
+                icon: "home"
             },
             {
                 name: "projects",
                 url: "/#/projects",
-                text: "Projects"
+                text: "Projects",
+                icon: "cog",
+                showProjectsBadge: true
             },
             {
                 name: "support",
                 url: "/#/support",
-                text: "Support"
+                text: "Support",
+                icon: "question-sign"
             }
         ],
         supportLink: 'https://github.com/learnerbot/learnerbot.github.io/issues',

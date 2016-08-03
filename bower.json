@@ -8,6 +8,7 @@
     "marked": "0.3.3",
     "highlightjs": "8.5.0",
     "bootstrap": "3.3.4",
+    "bootswatch": "v3.3.4",
     "requirejs": "2.1.18"
   },
   "exportsOverride": {
@@ -30,6 +31,10 @@
       "js": "dist/js/*.min.js",
       "css": "dist/css/*.min.css",
       "fonts": "dist/fonts/*"
+    },
+    "bootswatch": {
+      "css": "journal/*.min.css",
+      "fonts": "fonts/*"
     }
   }
 }
