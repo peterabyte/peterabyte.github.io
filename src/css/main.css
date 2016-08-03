@@ -96,16 +96,6 @@ a.navbar-brand {
 
 /* error header */
 
-.error-container {
-    display: block;
-    width: auto;
-    background-color: #FF9999;
-    color: black;
-    border: 1px solid #FF9999;
-    border-radius: 5px;
-    padding: 1em 1em;
-}
-
 .error-item-list {
     margin: 0;
 }
