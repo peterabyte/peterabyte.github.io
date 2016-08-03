@@ -6,7 +6,7 @@
   "developedBy": "LearnerBot",
   "repository": {
     "type": "git",
-    "url": "https://github.com/learnerbot/homepage"
+    "url": "https://github.com/learnerbot/learnerbot.github.io"
   },
   "devDependencies": {
     "matchdep": "0.3.0",
