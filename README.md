@@ -67,6 +67,12 @@ Run end-2-end tests on live environment.
 
 `grunt e2eprod`
 
+### Add a new project
+
+Update the *src/script/config.js* file with the new project. Add it to the list of *projects* so that it will be available on **learnerbot.github.io**. 
+
+Update the *test/protractor.conf.js* file with the new project. Add it to the list of *projects.idList* so that e2e tests will run for this new project as well.
+
 ## Common pitfalls
 
 Here are some pitfalls I encountered during development.
