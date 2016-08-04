@@ -16,7 +16,7 @@
                         <a href="{{menuItem.url}}" data-menu-item="{{menuItem.name}}">
                             <span ng-if="menuItem.icon" class="glyphicon glyphicon-{{menuItem.icon}}"></span>
                             {{menuItem.text}}
-                            <span ng-if="menuItem.showProjectsBadge" class="badge" data-render-projects-badge></span>
+                            <span ng-if="menuItem.name == 'projects'" class="badge" data-render-projects-badge></span>
                         </a>
                     </li>
                 </ul>

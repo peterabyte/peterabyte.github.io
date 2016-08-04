@@ -13,8 +13,7 @@ define([], function () {
                 name: "projects",
                 url: "/#/projects",
                 text: "Projects",
-                icon: "cog",
-                showProjectsBadge: true
+                icon: "cog"
             },
             {
                 name: "support",
