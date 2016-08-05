@@ -4,7 +4,11 @@
         <div class="panel-heading">
             <a href="/#/projects/{{pKey}}">{{pVal.title}}</a>
         </div>
-        <div class="panel-body" data-project-id="{{pKey}}" data-render-project-description>
+        <div class="panel-body">
+            <div data-project-id="{{pKey}}" data-render-project-description></div>
+            <div>
+                <div class="project-tag" ng-repeat="tag in pVal.tags"><span class="label label-default">{{tag}}</span></div>
+            </div>
         </div>
         <div class="panel-footer">
             <a href="/#/projects/{{pKey}}">Read more</a>&nbsp;&middot;&nbsp;<a target="_blank" href="{{pVal.repoUrl}}">Go to source</a>

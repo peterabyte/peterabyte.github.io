@@ -151,6 +151,11 @@ a.navbar-brand {
     color: grey;
 }
 
+.project-tag {
+    display: inline-block;
+    margin-right: 0.25em;
+}
+
 /* home page */
 
 .home-container {

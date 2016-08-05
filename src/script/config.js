@@ -29,21 +29,24 @@ define([], function () {
                 repoApiUrl: "https://api.github.com/repos/learnerbot/learnerbot.github.io?callback",
                 readmeUrl: "https://api.github.com/repos/learnerbot/learnerbot.github.io/contents/README.md",
                 title: "learnerbot.github.io",
-                description: "The **learnerbot.github.io** project is a Single Page Application hosted on GitHub which holds a reference to some of my pet projects."
+                description: "The **learnerbot.github.io** project is a Single Page Application hosted on GitHub which holds a reference to some of my pet projects.",
+                tags: ["project"]
             },
             angular_example : {
                 repoUrl: "https://github.com/learnerbot/angular",
                 repoApiUrl: "https://api.github.com/repos/learnerbot/angular?callback",
                 readmeUrl: "https://api.github.com/repos/learnerbot/angular/contents/README.md",
                 title: "Angular Example",
-                description: "This is a simple example to understand the basics of *AngularJS*."
+                description: "This is a simple example to understand the basics of *AngularJS*.",
+                tags: ["example"]
             },
             spring_boot_example : {
                 repoUrl: "https://github.com/learnerbot/spring-boot",
                 repoApiUrl: "https://api.github.com/repos/learnerbot/spring-boot?callback",
                 readmeUrl: "https://api.github.com/repos/learnerbot/spring-boot/contents/README.md",
                 title: "Spring Boot Example",
-                description: "A simple web application based on *Spring Boot*."
+                description: "A simple web application based on *Spring Boot*.",
+                tags: ["example"]
             }
         },
         welcomeCode: {
