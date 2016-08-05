@@ -37,6 +37,13 @@ define([], function () {
                 readmeUrl: "https://api.github.com/repos/learnerbot/angular/contents/README.md",
                 title: "Angular Example",
                 description: "This is a simple example to understand the basics of *AngularJS*."
+            },
+            spring_boot_example : {
+                repoUrl: "https://github.com/learnerbot/spring-boot",
+                repoApiUrl: "https://api.github.com/repos/learnerbot/spring-boot?callback",
+                readmeUrl: "https://api.github.com/repos/learnerbot/spring-boot/contents/README.md",
+                title: "Spring Boot Example",
+                description: "A simple web application based on *Spring Boot*."
             }
         },
         welcomeCode: {
