@@ -29,6 +29,26 @@ define(['angular',
         util.errorHandler.reset();
     };
 
+    var helper = {
+        initCtrl: function() {
+            util.errorHandler.reset();
+        },
+
+        getProjectById: function(projectId) {
+            var project,
+                i;
+
+            for (i = 0; i < config.projects.length; i = i + 1) {
+                if (config.projects[i].id === projectId) {
+                    project = config.projects[i];
+                    break;
+                }
+            }
+
+            return project;
+        }
+    };
+
     app.constant("config", config);
 
     app.config(['$routeProvider', function ($routeProvider) {
@@ -81,16 +101,12 @@ define(['angular',
         initCtrl();
         $scope.projectFound = false;
         if ($routeParams.id) {
-            var projectId = $routeParams.id,
-                pId;
-            for (pId in config.projects) {
-                if (config.projects.hasOwnProperty(pId) && pId === projectId) {
-                    $scope.projectId = pId;
-                    $scope.project = config.projects[pId];
-                    $rootScope.title = $route.current.$$route.title + ': ' + config.projects[pId].title;
-                    $scope.projectFound = true;
-                    break;
-                }
+            var project = helper.getProjectById($routeParams.id);
+            if (project) {
+                $scope.projectId = project.id;
+                $scope.project = project;
+                $rootScope.title = $route.current.$$route.title + ': ' + project.title;
+                $scope.projectFound = true;
             }
         }
     });
@@ -130,9 +146,12 @@ define(['angular',
     app.directive('renderProjectDescription', function () {
         return {
             link: function (scope, element, attrs) {
-                var raw = config.projects[attrs.projectId].description;
-                element.html(marked(raw));
-                element.addClass(attrs.projectId + '-content-loaded');
+                var project = helper.getProjectById(attrs.projectId);
+                if (project) {
+                    var raw = project.description;
+                    element.html(marked(raw));
+                    element.addClass(attrs.projectId + '-content-loaded');
+                }
             }
         };
     });
@@ -140,20 +159,23 @@ define(['angular',
     app.directive('renderProjectReadme', function () {
         return {
             link: function (scope, element, attrs) {
-                var readmeUrl = config.projects[attrs.projectId].readmeUrl;
-                $.ajax({
-                    type : "GET",
-                    url : readmeUrl,
-                    cache: false,
-                    dataType: "json",
-                    timeout: 2500
-                }).done(function (data) {
-                    element.html(marked(atob(data.content)));
-                    element.addClass('readme-content-loaded');
-                }).fail(function () {
-                    element.empty();
-                    util.errorHandler.error('Failed to load project README!');
-                });
+                var project = helper.getProjectById(attrs.projectId);
+                if (project) {
+                    var readmeUrl = project.readmeUrl;
+                    $.ajax({
+                        type : "GET",
+                        url : readmeUrl,
+                        cache: false,
+                        dataType: "json",
+                        timeout: 2500
+                    }).done(function (data) {
+                        element.html(marked(atob(data.content)));
+                        element.addClass('readme-content-loaded');
+                    }).fail(function () {
+                        element.empty();
+                        util.errorHandler.error('Failed to load project README!');
+                    });
+                }
             }
         };
     });
@@ -161,18 +183,7 @@ define(['angular',
     app.directive('renderProjectsBadge', function () {
         return {
             link: function (scope, element, attrs) {
-                var numberOfProjects = -1;
-                if (Object.keys) {
-                    numberOfProjects = Object.keys(config.projects).length;
-                }
-                if (numberOfProjects < 0) {
-                    numberOfProjects = 0;
-                    for (var p in config.projects) {
-                        if (config.projects.hasOwnProperty(p)) {
-                            numberOfProjects = numberOfProjects + 1;
-                        }
-                    }
-                }
+                var numberOfProjects = config.projects.length;
                 element.html(numberOfProjects);
            }
        };
