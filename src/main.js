@@ -113,6 +113,8 @@ define(['angular',
                 $.ajax({
                     type: "GET",
                     url: welcomeCodeUrl,
+                    dataType: "text",
+                    timeout: 2000,
                     success: function (data) {
                         element.html(marked(data));
                         element.addClass('welcome-code-loaded');
@@ -141,7 +143,10 @@ define(['angular',
                 var readmeUrl = config.projects[attrs.projectId].readmeUrl;
                 $.ajax({
                     type : "GET",
-                    url : readmeUrl
+                    url : readmeUrl,
+                    cache: false,
+                    dataType: "json",
+                    timeout: 2500
                 }).done(function (data) {
                     element.html(marked(atob(data.content)));
                     element.addClass('readme-content-loaded');
