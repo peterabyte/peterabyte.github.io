@@ -59,6 +59,15 @@ define([], function () {
                 title: "Spring Boot Security Example",
                 description: "A simple web application based on *Spring Boot* to understand the basics of the *Spring Boot Security* feature.",
                 tags: ["example"]
+            },
+            {
+                id: "spring_boot_mongodb_example",
+                repoUrl: "https://github.com/learnerbot/spring-boot-mongodb",
+                repoApiUrl: "https://api.github.com/repos/learnerbot/spring-boot-mongodb?callback",
+                readmeUrl: "https://api.github.com/repos/learnerbot/spring-boot-mongodb/contents/README.md",
+                title: "Spring Boot MongoDB Example",
+                description: "A simple web application based on *Spring Boot* to understand the basics of the *Spring Boot MongoDB* feature.",
+                tags: ["example"]
             }
         ],
         welcomeCode: {
