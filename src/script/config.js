@@ -77,6 +77,15 @@ define([], function () {
                 title: "Selenium",
                 description: "This project's main goal is to understand the basics of *Selenium*. The project contains a simple web application based on *Spring Boot* and the tests are written with the help of *Cucumber/Gherkin*.",
                 tags: ["example"]
+            },
+            {
+                id: "d3js_example",
+                repoUrl: "https://github.com/learnerbot/d3js",
+                repoApiUrl: "https://api.github.com/repos/learnerbot/d3js?callback",
+                readmeUrl: "https://api.github.com/repos/learnerbot/d3js/contents/README.md",
+                title: "D3.js",
+                description: "This is a simple web application powered by *AngularJS* to understand the basics of *D3.js*.",
+                tags: ["example"]
             }
         ],
         welcomeCode: {
