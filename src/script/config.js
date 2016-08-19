@@ -68,6 +68,15 @@ define([], function () {
                 title: "Spring Boot MongoDB",
                 description: "A simple web application based on *Spring Boot* to understand the basics of the *Spring Boot MongoDB* feature.",
                 tags: ["example"]
+            },
+            {
+                id: "selenium_example",
+                repoUrl: "https://github.com/learnerbot/selenium",
+                repoApiUrl: "https://api.github.com/repos/learnerbot/selenium?callback",
+                readmeUrl: "https://api.github.com/repos/learnerbot/selenium/contents/README.md",
+                title: "Selenium",
+                description: "This project's main goal is to understand the basics of *Selenium*. The project contains a simple web application based on *Spring Boot* and the tests are written with the help of *Cucumber/Gherkin*.",
+                tags: ["example"]
             }
         ],
         welcomeCode: {

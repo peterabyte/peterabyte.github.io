@@ -7,7 +7,8 @@ exports.config = {
                     "angular_example",
                     "spring_boot_example",
                     "spring_boot_security_example",
-                    "spring_boot_mongodb_example"
+                    "spring_boot_mongodb_example",
+                    "selenium_example"
                 ]
             },
             welcomeCode : {
