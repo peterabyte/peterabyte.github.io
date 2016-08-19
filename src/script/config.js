@@ -38,7 +38,7 @@ define([], function () {
                 repoUrl: "https://github.com/learnerbot/angular",
                 repoApiUrl: "https://api.github.com/repos/learnerbot/angular?callback",
                 readmeUrl: "https://api.github.com/repos/learnerbot/angular/contents/README.md",
-                title: "Angular Example",
+                title: "Angular",
                 description: "This is a simple example to understand the basics of *AngularJS*.",
                 tags: ["example"]
             },
@@ -47,7 +47,7 @@ define([], function () {
                 repoUrl: "https://github.com/learnerbot/spring-boot",
                 repoApiUrl: "https://api.github.com/repos/learnerbot/spring-boot?callback",
                 readmeUrl: "https://api.github.com/repos/learnerbot/spring-boot/contents/README.md",
-                title: "Spring Boot Example",
+                title: "Spring Boot",
                 description: "A simple web application based on *Spring Boot*.",
                 tags: ["example"]
             },
@@ -56,7 +56,7 @@ define([], function () {
                 repoUrl: "https://github.com/learnerbot/spring-boot-security",
                 repoApiUrl: "https://api.github.com/repos/learnerbot/spring-boot-security?callback",
                 readmeUrl: "https://api.github.com/repos/learnerbot/spring-boot-security/contents/README.md",
-                title: "Spring Boot Security Example",
+                title: "Spring Boot Security",
                 description: "A simple web application based on *Spring Boot* to understand the basics of the *Spring Boot Security* feature.",
                 tags: ["example"]
             },
@@ -65,7 +65,7 @@ define([], function () {
                 repoUrl: "https://github.com/learnerbot/spring-boot-mongodb",
                 repoApiUrl: "https://api.github.com/repos/learnerbot/spring-boot-mongodb?callback",
                 readmeUrl: "https://api.github.com/repos/learnerbot/spring-boot-mongodb/contents/README.md",
-                title: "Spring Boot MongoDB Example",
+                title: "Spring Boot MongoDB",
                 description: "A simple web application based on *Spring Boot* to understand the basics of the *Spring Boot MongoDB* feature.",
                 tags: ["example"]
             }
