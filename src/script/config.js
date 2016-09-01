@@ -70,6 +70,15 @@ define([], function () {
                 tags: ["example"]
             },
             {
+                id: "spring_dynamic_language_support_example",
+                repoUrl: "https://github.com/learnerbot/spring-dynamic-language-support",
+                repoApiUrl: "https://api.github.com/repos/learnerbot/spring-dynamic-language-support?callback",
+                readmeUrl: "https://api.github.com/repos/learnerbot/spring-dynamic-language-support/contents/README.md",
+                title: "Spring Dynamic Language Support",
+                description: "This is a simple web application based on *Spring Boot* to understand the basics of *Spring Dynamic Language Support*.",
+                tags: ["example"]
+            },
+            {
                 id: "selenium_example",
                 repoUrl: "https://github.com/learnerbot/selenium",
                 repoApiUrl: "https://api.github.com/repos/learnerbot/selenium?callback",

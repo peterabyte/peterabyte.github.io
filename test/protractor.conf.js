@@ -8,6 +8,7 @@ exports.config = {
                     "spring_boot_example",
                     "spring_boot_security_example",
                     "spring_boot_mongodb_example",
+                    "spring_dynamic_language_support_example",
                     "selenium_example",
                     "d3js_example"
                 ]
