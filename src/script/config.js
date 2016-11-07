@@ -20,6 +20,12 @@ define([], function () {
                 url: "/#/support",
                 text: "Support",
                 icon: "question-sign"
+            },
+            {
+                name: "about",
+                url: "/#/about",
+                text: "About",
+                icon: "user"
             }
         ],
         supportLink: 'https://github.com/learnerbot/learnerbot.github.io/issues',

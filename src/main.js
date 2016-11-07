@@ -59,6 +59,7 @@ define(['angular',
             .when("/projects", {templateUrl: "src/view/partial/projects.html", controller: "ProjectsCtrl", title: "Projects"})
             .when("/projects/:id", {templateUrl: "src/view/partial/project.html", controller: "ProjectCtrl", title: "Project"})
             .when("/support", {templateUrl: "src/view/partial/support.html", controller: "SupportCtrl", title: "Support"})
+            .when("/about", {templateUrl: "src/view/partial/about.html", controller: "AboutCtrl", title: "About"})
             .otherwise({templateUrl: "src/view/partial/404.html", controller: "NotFoundCtrl", title: "404 Not Found"});
     }]);
 
@@ -86,6 +87,10 @@ define(['angular',
     app.controller('SupportCtrl', function ($scope, config) {
         initCtrl();
         $scope.supportLink = config.supportLink;
+    });
+
+    app.controller('AboutCtrl', function ($scope, config) {
+        initCtrl();
     });
 
     app.controller('NotFoundCtrl', function ($rootScope) {

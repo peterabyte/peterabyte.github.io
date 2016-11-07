@@ -40,6 +40,11 @@ describe("E2E testing", function() {
         expect(browser.getLocationAbsUrl()).toMatch("/support");
     });
 
+    it("should display about page", function() {
+        browser.get('/#/about');
+        expect(browser.getLocationAbsUrl()).toMatch("/about");
+    });
+
     it("should display separate projects", function() {
         var idList = protractor.config.projects.idList;
         for (var i = 0; i < idList.length; i++) {
