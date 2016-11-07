@@ -4,7 +4,7 @@ module.exports = function(grunt) {
 
     var config = {
         port: 12001,
-        testBrowser: 'chrome'
+        testBrowser: 'firefox'
     };
 
     grunt.initConfig({
