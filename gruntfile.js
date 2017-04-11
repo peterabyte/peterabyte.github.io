@@ -13,18 +13,6 @@ module.exports = function(grunt) {
 
         config: config,
 
-        bower: {
-            install: {
-                options: {
-                    install: true,
-                    copy: true,
-                    targetDir: './libs',
-                    cleanTargetDir: true,
-                    layout: 'byComponent'
-                }
-            }
-        },
-
         jshint: {
             all: [ 'gruntfile.js', 'src/*.js', 'src/**/*.js' ]
         },
@@ -154,7 +142,6 @@ module.exports = function(grunt) {
     ]);
 
     grunt.registerTask('dev', [
-        'bower',
         'connect:dev',
         'watch:dev'
     ]);

@@ -1,12 +1,12 @@
 require.config({
     paths: {
-        angular: '../../libs/angular/js/angular.min',
-        angularRoute: '../../libs/angular-route/js/angular-route.min',
-        angularSanitize: '../../libs/angular-sanitize/js/angular-sanitize.min',
-        marked: '../../libs/marked/js/marked.min',
-        hljs: '../../libs/highlightjs/highlight.pack',
-        jquery: '../../libs/jquery/js/jquery.min',
-        bootstrap: '../../libs/bootstrap/js/bootstrap.min',
+        angular: 'https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.min',
+        angularRoute: 'https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-route.min',
+        angularSanitize: 'https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-sanitize.min',
+        marked: 'https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.min',
+        hljs: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min',
+        jquery: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min',
+        bootstrap: 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min',
         main: '../main'
     },
     shim: {
