@@ -37,7 +37,15 @@ define([], function () {
                 readmeUrl: "https://api.github.com/repos/learnerbot/learnerbot.github.io/contents/README.md",
                 title: "learnerbot.github.io",
                 description: "The **learnerbot.github.io** project is a Single Page Application hosted on GitHub which holds a reference to some of my pet projects.",
-                tags: ["project"]
+                mainLanguageType: 'devicon-angularjs-plain',
+                iconTags: [
+                    'devicon-javascript-plain',
+                    'devicon-angularjs-plain',
+                    'devicon-grunt-plain',
+                    'devicon-jquery-plain',
+                    'devicon-bootstrap-plain',
+                ],
+                tags: []
             },
             {
                 id: "angular_example",
@@ -46,7 +54,15 @@ define([], function () {
                 readmeUrl: "https://api.github.com/repos/learnerbot/angular/contents/README.md",
                 title: "Angular",
                 description: "This is a simple example to understand the basics of *AngularJS*.",
-                tags: ["example"]
+                mainLanguageType: 'devicon-angularjs-plain',
+                iconTags: [
+                    'devicon-javascript-plain',
+                    'devicon-angularjs-plain',
+                    'devicon-grunt-plain',
+                    'devicon-jquery-plain',
+                    'devicon-bootstrap-plain',
+                ],
+                tags: []
             },
             {
                 id: "spring_boot_example",
@@ -55,7 +71,14 @@ define([], function () {
                 readmeUrl: "https://api.github.com/repos/learnerbot/spring-boot/contents/README.md",
                 title: "Spring Boot",
                 description: "A simple web application based on *Spring Boot*.",
-                tags: ["example"]
+                mainLanguageType: 'devicon-java-plain-wordmark',
+                iconTags: [
+                    'devicon-java-plain',
+                    'devicon-gradle-plain',
+                    'devicon-jquery-plain',
+                    'devicon-bootstrap-plain',
+                ],
+                tags: ['Sping Boot', 'Thymeleaf']
             },
             {
                 id: "spring_boot_security_example",
@@ -64,7 +87,14 @@ define([], function () {
                 readmeUrl: "https://api.github.com/repos/learnerbot/spring-boot-security/contents/README.md",
                 title: "Spring Boot Security",
                 description: "A simple web application based on *Spring Boot* to understand the basics of the *Spring Boot Security* feature.",
-                tags: ["example"]
+                mainLanguageType: 'devicon-java-plain-wordmark',
+                iconTags: [
+                    'devicon-java-plain',
+                    'devicon-gradle-plain',
+                    'devicon-jquery-plain',
+                    'devicon-bootstrap-plain',
+                ],
+                tags: ['Sping Boot', 'Thymeleaf']
             },
             {
                 id: "spring_boot_mongodb_example",
@@ -73,7 +103,14 @@ define([], function () {
                 readmeUrl: "https://api.github.com/repos/learnerbot/spring-boot-mongodb/contents/README.md",
                 title: "Spring Boot MongoDB",
                 description: "A simple web application based on *Spring Boot* to understand the basics of the *Spring Boot MongoDB* feature.",
-                tags: ["example"]
+                mainLanguageType: 'devicon-java-plain-wordmark',
+                iconTags: [
+                    'devicon-java-plain',
+                    'devicon-gradle-plain',
+                    'devicon-jquery-plain',
+                    'devicon-bootstrap-plain',
+                ],
+                tags: ['Sping Boot', 'Thymeleaf']
             },
             {
                 id: "spring_dynamic_language_support_example",
@@ -82,7 +119,14 @@ define([], function () {
                 readmeUrl: "https://api.github.com/repos/learnerbot/spring-dynamic-language-support/contents/README.md",
                 title: "Spring Dynamic Language Support",
                 description: "This is a simple web application based on *Spring Boot* to understand the basics of *Spring Dynamic Language Support*.",
-                tags: ["example"]
+                mainLanguageType: 'devicon-java-plain-wordmark',
+                iconTags: [
+                    'devicon-java-plain',
+                    'devicon-gradle-plain',
+                    'devicon-jquery-plain',
+                    'devicon-bootstrap-plain',
+                ],
+                tags: ['Sping Boot', 'Thymeleaf']
             },
             {
                 id: "selenium_example",
@@ -91,7 +135,14 @@ define([], function () {
                 readmeUrl: "https://api.github.com/repos/learnerbot/selenium/contents/README.md",
                 title: "Selenium",
                 description: "This project's main goal is to understand the basics of *Selenium*. The project contains a simple web application based on *Spring Boot* and the tests are written with the help of *Cucumber/Gherkin*.",
-                tags: ["example"]
+                mainLanguageType: 'devicon-java-plain-wordmark',
+                iconTags: [
+                    'devicon-java-plain',
+                    'devicon-gradle-plain',
+                    'devicon-jquery-plain',
+                    'devicon-bootstrap-plain',
+                ],
+                tags: ['Sping Boot', 'Thymeleaf']
             },
             {
                 id: "d3js_example",
@@ -100,7 +151,16 @@ define([], function () {
                 readmeUrl: "https://api.github.com/repos/learnerbot/d3js/contents/README.md",
                 title: "D3.js",
                 description: "This is a simple web application powered by *AngularJS* to understand the basics of *D3.js*.",
-                tags: ["example"]
+                mainLanguageType: 'devicon-d3js-plain',
+                iconTags: [
+                    'devicon-javascript-plain',
+                    'devicon-d3js-plain',
+                    'devicon-angularjs-plain',
+                    'devicon-grunt-plain',
+                    'devicon-jquery-plain',
+                    'devicon-bootstrap-plain',
+                ],
+                tags: []
             }
         ],
         projectsViewChunkSize : 2,

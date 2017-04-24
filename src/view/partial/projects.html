@@ -2,16 +2,16 @@
     <h1>Projects</h1>
     <div class="row row-eq-height" ng-repeat="projectsList in slicedProjects" data-done>
         <div class="col-sm-{{12 / chunkSize}} project-description project-{{ ($parent.$index % 2 == 0) ? 'evenrow' : 'oddrow' }}-{{ ($index % 2 == 0) ? 'evencol' : 'oddcol' }}" ng-repeat="project in projectsList" data-done>
-            <h3><a href="/#/projects/{{project.id}}">{{project.title}}</a></h3>
+            <h3><span ng-if="project.mainLanguageType" class="{{ project.mainLanguageType }}"></span> <a href="/#/projects/{{project.id}}">{{project.title}}</a></h3>
             <p data-project-id="{{project.id}}" data-render-project-description></p>
             <p>
-            <div class="project-tag" ng-repeat="tag in project.tags">
-                <span class="label label-default">{{tag}}</span>
-            </div>
+                <strong>Tech: </strong>
+                <span ng-repeat="iconTag in project.iconTags"><span class="{{ iconTag }}"></span> </span>
+                <span ng-repeat="tag in project.tags"><span class="label label-default">{{ tag }}</span> </span>
             </p>
-            <div>
-                <a href="/#/projects/{{project.id}}">Read more</a> or <a target="_blank" href="{{project.repoUrl}}">go to source</a>
-            </div>
+            <p>
+                <a href="/#/projects/{{project.id}}">Read more</a> or <a target="_blank" href="{{project.repoUrl}}">go to source <i class="fa fa-github" area-hidden="true"></i></a>
+            </p>
         <div ng-repeat="project in projectsList" data-done>
     </div>
 </div>
