@@ -1,17 +1,17 @@
-<div class="body-content-container">
+<div class="body-content-container projects">
     <h1>Projects</h1>
-    <div ng-repeat="project in config.projects" class="panel panel-info project-item-panel" data-done>
-        <div class="panel-heading">
-            <a href="/#/projects/{{project.id}}">{{project.title}}</a>
-        </div>
-        <div class="panel-body">
-            <div data-project-id="{{project.id}}" data-render-project-description></div>
-            <div>
-                <div class="project-tag" ng-repeat="tag in project.tags"><span class="label label-default">{{tag}}</span></div>
+    <div class="row row-eq-height" ng-repeat="projectsList in slicedProjects" data-done>
+        <div class="col-sm-{{12 / chunkSize}} project-description project-{{ ($parent.$index % 2 == 0) ? 'evenrow' : 'oddrow' }}-{{ ($index % 2 == 0) ? 'evencol' : 'oddcol' }}" ng-repeat="project in projectsList" data-done>
+            <h3><a href="/#/projects/{{project.id}}">{{project.title}}</a></h3>
+            <p data-project-id="{{project.id}}" data-render-project-description></p>
+            <p>
+            <div class="project-tag" ng-repeat="tag in project.tags">
+                <span class="label label-default">{{tag}}</span>
             </div>
-        </div>
-        <div class="panel-footer">
-            <a href="/#/projects/{{project.id}}">Read more</a>&nbsp;&middot;&nbsp;<a target="_blank" href="{{project.repoUrl}}">Go to source</a>
-        </div>
+            </p>
+            <div>
+                <a href="/#/projects/{{project.id}}">Read more</a> or <a target="_blank" href="{{project.repoUrl}}">go to source</a>
+            </div>
+        <div ng-repeat="project in projectsList" data-done>
     </div>
 </div>

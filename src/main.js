@@ -98,8 +98,15 @@ define(['angular',
         $rootScope.title = '404 Not Found';
     });
 
-    app.controller('ProjectsCtrl', function () {
+    app.controller('ProjectsCtrl', function ($scope, config) {
         initCtrl();
+        var slicedProjects = [],
+            chunkSize = config.projectsViewChunkSize;
+        for (var i = 0; i < Math.ceil(config.projects.length / chunkSize); i++) {
+            slicedProjects[i] = config.projects.slice(i * chunkSize, (i + 1) * chunkSize);
+        }
+        $scope.slicedProjects = slicedProjects;
+        $scope.chunkSize = chunkSize;
     });
 
     app.controller('ProjectCtrl', function ($scope, $routeParams, config, $rootScope, $route) {

@@ -18,26 +18,6 @@ body {
     margin: 0.5em 0.5em;
 }
 
-a:link {
-    text-decoration: none;
-    color: #3333AD;
-}
-
-a:visited {
-    text-decoration: none;
-    color: #3333AD;
-}
-
-a:hover {
-    text-decoration: underline;
-    color: #3333AD;
-}
-
-a:active {
-    text-decoration: none;
-    color: #3333AD;
-}
-
 .visually-hidden {
     border: 0;
     clip: rect(0 0 0 0);
@@ -56,6 +36,15 @@ a:active {
     overflow: visible;
     position: static;
     width: auto;
+}
+
+a, a:hover, a:active, a:visited, a:focus {
+    color: #23527c;
+}
+
+.row {
+    margin-right: 0;
+    margin-left: 0;
 }
 
 /* header */
@@ -110,53 +99,7 @@ a.navbar-brand {
     font-size: 1em;
 }
 
-/* project description */
-
-.project-description-container {
-    width: auto;
-    border: 1px solid #D8D8D8;
-    border-radius: 5px;
-    padding: 0.5em 0.5em;
-}
-
-.project-description-header {
-    display: block;
-    width: auto;
-    font-size: 1.1em;
-    font-weight: bold;
-    vertical-align: middle;
-}
-
-.project-description-content {
-    display: block;
-    width: auto;
-    font-size: 1em;
-}
-
-.project-description-content p {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-}
-
-.project-description-footer {
-    font-size: 0.75em;
-}
-
-.project-item-panel .panel-heading a {
-    color: white;
-    font-size: 1.25em;
-}
-
-.project-item-panel .panel-footer a {
-    color: grey;
-}
-
-.project-tag {
-    display: inline-block;
-    margin-right: 0.25em;
-}
-
-/* home page */
+/* home */
 
 .home-container {
     padding: 2em 1em;
@@ -187,7 +130,47 @@ a.navbar-brand {
     font-size: 0.90em;
 }
 
-/* project page */
+/*
+#99B2B7 //dark blue
+#948C75 //dark green
+*/
+
+/* projects */
+@media (min-width: 768px) {
+    .project-description {
+        min-height: 210px;
+    }
+
+    .project-evenrow-evencol, .project-oddrow-oddcol {
+        background-color: #DDDFFF;
+    }
+
+    .project-oddrow-evencol, .project-evenrow-oddcol {
+        background-color: #FFFEEE;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-description {
+        padding-top: 5px;
+        padding-bottom: 25px;
+    }
+
+    .project-evenrow-evencol, .project-oddrow-evencol {
+        background-color: #DDDFFF;
+    }
+
+    .project-oddrow-oddcol, .project-evenrow-oddcol {
+        background-color: #FFFEEE;
+    }
+}
+
+.project-tag {
+    display: inline-block;
+    margin-right: 0.25em;
+}
+
+/* project */
 
 .project-visit-source {
     display: block;

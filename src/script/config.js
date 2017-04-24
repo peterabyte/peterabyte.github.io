@@ -103,6 +103,7 @@ define([], function () {
                 tags: ["example"]
             }
         ],
+        projectsViewChunkSize : 2,
         welcomeCode: {
             base: "src/content/welcome_code/",
             type: [
