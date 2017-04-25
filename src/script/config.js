@@ -106,6 +106,7 @@ define([], function () {
                 mainLanguageType: 'devicon-java-plain-wordmark',
                 iconTags: [
                     'devicon-java-plain',
+                    'devicon-mongodb-plain',
                     'devicon-gradle-plain',
                     'devicon-jquery-plain',
                     'devicon-bootstrap-plain',
@@ -126,7 +127,7 @@ define([], function () {
                     'devicon-jquery-plain',
                     'devicon-bootstrap-plain',
                 ],
-                tags: ['Sping Boot', 'Thymeleaf']
+                tags: ['Sping Boot', 'Groovy', 'Thymeleaf']
             },
             {
                 id: "selenium_example",
@@ -138,6 +139,7 @@ define([], function () {
                 mainLanguageType: 'devicon-java-plain-wordmark',
                 iconTags: [
                     'devicon-java-plain',
+                    'devicon-cucumber-plain',
                     'devicon-gradle-plain',
                     'devicon-jquery-plain',
                     'devicon-bootstrap-plain',
@@ -163,6 +165,20 @@ define([], function () {
                 tags: []
             }
         ],
+        iconTooltips: {
+            'devicon-java-plain' : 'Java',
+            'devicon-java-plain-wordmark' : 'Java',
+            'devicon-gradle-plain' : 'Gradle',
+            'devicon-cucumber-plain' : 'Cucumber',
+            'devicon-javascript-plain' : 'JavaScript',
+            'devicon-d3js-plain' : 'D3JS',
+            'devicon-angularjs-plain' : 'AngularJS',
+            'devicon-grunt-plain' : 'Grunt',
+            'devicon-jquery-plain' : 'JQuery',
+            'devicon-bootstrap-plain' : 'Bootstrap',
+            'devicon-mongodb-plain' : 'MongoDB',
+            'fa fa-github' : 'GitHub',
+        },
         projectsViewChunkSize : 2,
         welcomeCode: {
             base: "src/content/welcome_code/",

@@ -46,6 +46,10 @@ define(['angular',
             }
 
             return project;
+        },
+
+        getTooltipById: function(iconId) {
+            return config.iconTooltips[iconId];
         }
     };
 
@@ -151,6 +155,20 @@ define(['angular',
                         util.errorHandler.error('Failed to load welcome code!');
                     }
                 });
+            }
+        };
+    });
+
+    app.directive('renderIconTooltip', function() {
+        return {
+            link: function (scope, element, attrs) {
+                var tooltip = helper.getTooltipById(attrs.class);
+                if (tooltip) {
+                    var $element = $(element);
+                    $element.attr('title', tooltip);
+                    $element.attr('data-toggle', 'tooltip');
+                    $element.tooltip();
+                }
             }
         };
     });
