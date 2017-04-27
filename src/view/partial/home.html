@@ -1,8 +1,48 @@
 <div class="body-content-container">
-    <div class="alert alert-info home-container">
-        <div class="home-title">Hello World!</div>
-        <div class="welcome-code" data-render-welcome-code></div>
-        <div><i>"Observe it, study it, understand it and let it run free in the Cloud."</i></div>
-        <div>This site hosts a few of my pet projects.</div>
-    </div>
+    <a name="main-title"></a>
+    <section id="main-title">
+        <div class="row">
+            <h1>Pet Projects</h1>
+            <div class="main-subtitle"><i>Observe it, study it, understand it and let it run free in the Cloud.</i></div>
+        </div>
+    </section>
+    <a name="techs"></a>
+    <section id="techs">
+        <div class="row tech-radar">
+            <h2 class="section-header">Technologies</h2>
+            <p>
+            <div class="techs">
+                <span ng-repeat="techWithIcon in techsWithIcon"><span class="{{ techWithIcon }}" data-render-icon-tooltip></span> </span>
+            </div>
+            <div class="techs">
+                <span ng-repeat="tech in techsWithoutIcon"><span class="label label-default">{{ tech }}</span> </span>
+            </div>
+            </p>
+        </div>
+    </section>
+    <a name="about"></a>
+    <section id="about">
+        <div class="row">
+            <h2 class="section-header">About</h2>
+            <p>I’m Gergo Peter Nagy, software developer scientist. As a good scientist I always experiment with new techniques and technologies to sharpen my skills. Here you can find some of my pet projects.</p>
+        </div>
+    </section>
+    <a name="projects"></a>
+    <section id="projects">
+        <h2 class="section-header">Projects</h2>
+        <div class="row row-eq-height" ng-repeat="projectsList in slicedProjects" data-done>
+            <div class="col-sm-{{12 / chunkSize}} project-description project-{{ ($parent.$index % 2 == 0) ? 'evenrow' : 'oddrow' }}-{{ ($index % 2 == 0) ? 'evencol' : 'oddcol' }}" ng-repeat="project in projectsList" data-done>
+                <h3><span ng-if="project.mainLanguageType" class="{{ project.mainLanguageType }}" data-render-icon-tooltip></span> <a href="/#/projects/{{project.id}}">{{project.title}}</a></h3>
+                <p data-project-id="{{project.id}}" data-render-project-description></p>
+                <p>
+                    <strong>Tech: </strong>
+                    <span ng-repeat="iconTag in project.iconTags"><span class="{{ iconTag }}" data-render-icon-tooltip></span> </span>
+                    <span ng-repeat="tag in project.tags"><span class="label label-default">{{ tag }}</span> </span>
+                </p>
+                <p>
+                    <a href="/#/projects/{{project.id}}">Read more</a> or <a target="_blank" href="{{project.repoUrl}}">go to source <i class="fa fa-github" area-hidden="true" data-render-icon-tooltip></i></a>
+                </p>
+            <div ng-repeat="project in projectsList" data-done>
+        </div>
+    </section>
 </div>

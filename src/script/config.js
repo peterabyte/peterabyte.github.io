@@ -5,27 +5,21 @@ define([], function () {
         menu: [
             {
                 name: "home",
-                url: "/#/home",
+                url: "/#/",
                 text: "Home",
                 icon: "home"
             },
             {
-                name: "projects",
-                url: "/#/projects",
-                text: "Projects",
-                icon: "cog"
-            },
-            {
-                name: "support",
-                url: "/#/support",
-                text: "Support",
-                icon: "question-sign"
-            },
-            {
                 name: "about",
-                url: "/#/about",
+                url: "/#/#about",
                 text: "About",
                 icon: "user"
+            },
+            {
+                name: "projects",
+                url: "/#/#projects",
+                text: "Projects",
+                icon: "cog"
             }
         ],
         supportLink: 'https://github.com/learnerbot/learnerbot.github.io/issues',
@@ -59,6 +53,7 @@ define([], function () {
                     'devicon-javascript-plain',
                     'devicon-angularjs-plain',
                     'devicon-grunt-plain',
+                    'devicon-bower-plain',
                     'devicon-jquery-plain',
                     'devicon-bootstrap-plain',
                 ],
@@ -159,6 +154,7 @@ define([], function () {
                     'devicon-d3js-plain',
                     'devicon-angularjs-plain',
                     'devicon-grunt-plain',
+                    'devicon-bower-plain',
                     'devicon-jquery-plain',
                     'devicon-bootstrap-plain',
                 ],
@@ -174,10 +170,12 @@ define([], function () {
             'devicon-d3js-plain' : 'D3JS',
             'devicon-angularjs-plain' : 'AngularJS',
             'devicon-grunt-plain' : 'Grunt',
+            'devicon-bower-plain' : 'Bower',
             'devicon-jquery-plain' : 'JQuery',
             'devicon-bootstrap-plain' : 'Bootstrap',
             'devicon-mongodb-plain' : 'MongoDB',
             'fa fa-github' : 'GitHub',
+            'fa fa-linkedin-square' : 'LinkedIn',
         },
         projectsViewChunkSize : 2,
         welcomeCode: {

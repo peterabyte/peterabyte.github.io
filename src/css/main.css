@@ -75,11 +75,12 @@ a.navbar-brand {
 }
 
 .footer-container {
-    text-align: center;
+    text-align: right;
+    padding-right: 0.5em;
 }
 
 .footer-text {
-    font-size: 0.75em;
+    font-size: 4em;
     color: #666666;
 }
 
@@ -101,6 +102,45 @@ a.navbar-brand {
 
 /* home */
 
+#main-title .row {
+    background-color: #00A0B0;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 50px 15px 70px 15px;
+}
+
+#main-title h1 {
+    font-weight: bold;
+}
+
+.main-subtitle {
+    font-size: 1.5em;
+}
+
+#techs .row {
+    padding: 30px 15px 50px 15px;
+}
+
+.techs {
+    text-align: center;
+    font-size: 3em;
+}
+
+#about .row {
+    background-color: #00A0B0;
+    color: #FFFFFF;
+    padding: 30px 15px 50px 15px;
+}
+
+#projects {
+    padding-top: 30px;
+}
+
+#projects .section-header {
+    padding-left: 15px;
+}
+
+/* obsolete home style */
 .home-container {
     padding: 2em 1em;
     text-align: center;
@@ -112,28 +152,6 @@ a.navbar-brand {
     margin-bottom: 15px;
 }
 
-.welcome-code pre {
-    display: inline-block;
-    overflow-x: auto;
-    max-width: 100%;
-    background-color: white;
-    border: 1px solid #D8D8D8;
-    border-radius: 5px;
-    padding: 0.25em 0.5em;
-    text-align: left;
-    word-break: normal;
-    word-wrap: normal;
-}
-
-.welcome-code pre code {
-    white-space: inherit;
-    font-size: 0.90em;
-}
-
-/*
-#99B2B7 //dark blue
-#948C75 //dark green
-*/
 
 /* projects */
 @media (min-width: 768px) {

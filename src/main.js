@@ -50,6 +50,25 @@ define(['angular',
 
         getTooltipById: function(iconId) {
             return config.iconTooltips[iconId];
+        },
+
+        shuffle: function (array) {
+            var currentIndex = array.length, temporaryValue, randomIndex;
+
+            // While there remain elements to shuffle...
+            while (0 !== currentIndex) {
+
+                // Pick a remaining element...
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex -= 1;
+
+                // And swap it with the current element.
+                temporaryValue = array[currentIndex];
+                array[currentIndex] = array[randomIndex];
+                array[randomIndex] = temporaryValue;
+            }
+
+            return array;
         }
     };
 
@@ -59,11 +78,7 @@ define(['angular',
         $routeProvider
             .when("/", {templateUrl: "src/view/partial/home.html", controller: "HomeCtrl", title: "Home"})
             .when("/home", {templateUrl: "src/view/partial/home.html", controller: "HomeCtrl", title: "Home"})
-            .when("/home/:code", {templateUrl: "src/view/partial/home.html", controller: "HomeCtrl", title: "Home"})
-            .when("/projects", {templateUrl: "src/view/partial/projects.html", controller: "ProjectsCtrl", title: "Projects"})
             .when("/projects/:id", {templateUrl: "src/view/partial/project.html", controller: "ProjectCtrl", title: "Project"})
-            .when("/support", {templateUrl: "src/view/partial/support.html", controller: "SupportCtrl", title: "Support"})
-            .when("/about", {templateUrl: "src/view/partial/about.html", controller: "AboutCtrl", title: "About"})
             .otherwise({templateUrl: "src/view/partial/404.html", controller: "NotFoundCtrl", title: "404 Not Found"});
     }]);
 
@@ -81,36 +96,39 @@ define(['angular',
     app.controller('ErrorHelperCtrl', function () {
     });
 
-    app.controller('HomeCtrl', function ($scope, $routeParams) {
+    app.controller('HomeCtrl', function ($scope, $routeParams, config) {
         initCtrl();
         if ($routeParams.code) {
             $scope.welcomeCodeId = $routeParams.code;
         }
-    });
 
-    app.controller('SupportCtrl', function ($scope, config) {
-        initCtrl();
-        $scope.supportLink = config.supportLink;
-    });
+        var techKeysWithIcon = {},
+            techKeysWithoutIcon = {},
+            i,
+            j;
+        for (i = 0; i < config.projects.length; i++) {
+            for (j = 0; j < config.projects[i].iconTags.length; j++) {
+                techKeysWithIcon[config.projects[i].iconTags[j]] = 1;
+            }
+            for (j = 0; j < config.projects[i].tags.length; j++) {
+                techKeysWithoutIcon[config.projects[i].tags[j]] = 1;
+            }
+        }
+        $scope.techsWithIcon = helper.shuffle(Object.keys(techKeysWithIcon));
+        $scope.techsWithoutIcon = helper.shuffle(Object.keys(techKeysWithoutIcon));
 
-    app.controller('AboutCtrl', function ($scope, config) {
-        initCtrl();
+        var slicedProjects = [],
+            chunkSize = config.projectsViewChunkSize;
+        for (i = 0; i < Math.ceil(config.projects.length / chunkSize); i++) {
+            slicedProjects[i] = config.projects.slice(i * chunkSize, (i + 1) * chunkSize);
+        }
+        $scope.slicedProjects = slicedProjects;
+        $scope.chunkSize = chunkSize;
     });
 
     app.controller('NotFoundCtrl', function ($rootScope) {
         initCtrl();
         $rootScope.title = '404 Not Found';
-    });
-
-    app.controller('ProjectsCtrl', function ($scope, config) {
-        initCtrl();
-        var slicedProjects = [],
-            chunkSize = config.projectsViewChunkSize;
-        for (var i = 0; i < Math.ceil(config.projects.length / chunkSize); i++) {
-            slicedProjects[i] = config.projects.slice(i * chunkSize, (i + 1) * chunkSize);
-        }
-        $scope.slicedProjects = slicedProjects;
-        $scope.chunkSize = chunkSize;
     });
 
     app.controller('ProjectCtrl', function ($scope, $routeParams, config, $rootScope, $route) {
@@ -125,38 +143,6 @@ define(['angular',
                 $scope.projectFound = true;
             }
         }
-    });
-
-    app.directive('renderWelcomeCode', function () {
-        return {
-            link: function (scope, element, attrs) {
-                var numOfTypes = config.welcomeCode.type.length,
-                    typeIndex = Math.floor((Math.random() * numOfTypes)),
-                    i;
-                if (scope.welcomeCodeId) {
-                    for (i = 0; i < numOfTypes; i++) {
-                        if (scope.welcomeCodeId === config.welcomeCode.type[i]) {
-                            typeIndex = i;
-                            break;
-                        }
-                    }
-                }
-                var welcomeCodeUrl = config.welcomeCode.base + config.welcomeCode.type[typeIndex] + '.md';
-                $.ajax({
-                    type: "GET",
-                    url: welcomeCodeUrl,
-                    dataType: "text",
-                    timeout: 2000,
-                    success: function (data) {
-                        element.html(marked(data));
-                        element.addClass('welcome-code-loaded');
-                    },
-                    error: function () {
-                        util.errorHandler.error('Failed to load welcome code!');
-                    }
-                });
-            }
-        };
     });
 
     app.directive('renderIconTooltip', function() {
