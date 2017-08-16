@@ -159,6 +159,82 @@ define([], function () {
                     'devicon-bootstrap-plain',
                 ],
                 tags: []
+            },
+            {
+                id: "nodejs_example",
+                repoUrl: "https://github.com/learnerbot/nodejs",
+                repoApiUrl: "https://api.github.com/repos/learnerbot/nodejs?callback",
+                readmeUrl: "https://api.github.com/repos/learnerbot/nodejs/contents/README.md",
+                title: "NodeJS",
+                description: "This is a simple example to understand the basics of *NodeJS*.",
+                mainLanguageType: 'devicon-nodejs-plain',
+                iconTags: [
+                    'devicon-javascript-plain',
+                    'devicon-nodejs-plain',
+                    'devicon-express-original',
+                ],
+                tags: []
+            },
+            {
+                id: "nodejs_handlebars_example",
+                repoUrl: "https://github.com/learnerbot/nodejs-handlebars",
+                repoApiUrl: "https://api.github.com/repos/learnerbot/nodejs-handlebars?callback",
+                readmeUrl: "https://api.github.com/repos/learnerbot/nodejs-handlebars/contents/README.md",
+                title: "NodeJS with Handlebars",
+                description: "This is a simple example to understand the basics of *NodeJS*.",
+                mainLanguageType: 'devicon-nodejs-plain',
+                iconTags: [
+                    'devicon-javascript-plain',
+                    'devicon-nodejs-plain',
+                    'devicon-express-original',
+                ],
+                tags: ['Handlebars']
+            },
+            {
+                id: "nodejs_in_docker",
+                repoUrl: "https://github.com/learnerbot/nodejs-in-docker",
+                repoApiUrl: "https://api.github.com/repos/learnerbot/nodejs-in-docker?callback",
+                readmeUrl: "https://api.github.com/repos/learnerbot/nodejs-in-docker/contents/README.md",
+                title: "NodeJS in Docker",
+                description: "This is a simple example to understand the basics of *Docker* with the help of a *NodeJS* web app.",
+                mainLanguageType: 'devicon-docker-plain',
+                iconTags: [
+                    'devicon-javascript-plain',
+                    'devicon-docker-plain',
+                    'devicon-nodejs-plain',
+                    'devicon-express-original',
+                ],
+                tags: []
+            },
+            {
+                id: "wordpress_on_heroku",
+                repoUrl: "https://github.com/learnerbot/wordpress-on-heroku",
+                repoApiUrl: "https://api.github.com/repos/learnerbot/wordpress-on-heroku?callback",
+                readmeUrl: "https://api.github.com/repos/learnerbot/wordpress-on-heroku/contents/README.md",
+                title: "WordPress on Heroku",
+                description: "Example *WordPress* site running on *Heroku*.",
+                mainLanguageType: 'devicon-wordpress-plain',
+                iconTags: [
+                    'devicon-php-plain',
+                    'devicon-wordpress-plain',
+                    'devicon-heroku-plain',
+                ],
+                tags: ['Composer']
+            },
+            {
+                id: "laravel_on_heroku",
+                repoUrl: "https://github.com/learnerbot/laravel-on-heroku",
+                repoApiUrl: "https://api.github.com/repos/learnerbot/laravel-on-heroku?callback",
+                readmeUrl: "https://api.github.com/repos/learnerbot/laravel-on-heroku/contents/README.md",
+                title: "Laravel on Heroku",
+                description: "Example *Laravel* site running on *Heroku*.",
+                mainLanguageType: 'devicon-laravel-plain',
+                iconTags: [
+                    'devicon-php-plain',
+                    'devicon-laravel-plain',
+                    'devicon-heroku-plain',
+                ],
+                tags: ['Composer']
             }
         ],
         iconTooltips: {
@@ -172,8 +248,15 @@ define([], function () {
             'devicon-grunt-plain' : 'Grunt',
             'devicon-bower-plain' : 'Bower',
             'devicon-jquery-plain' : 'JQuery',
+            'devicon-nodejs-plain' : 'NodeJS',
+            'devicon-express-original' : 'Express',
             'devicon-bootstrap-plain' : 'Bootstrap',
             'devicon-mongodb-plain' : 'MongoDB',
+            'devicon-wordpress-plain' : 'WordPress',
+            'devicon-laravel-plain' : 'Laravel',
+            'devicon-heroku-plain' : 'Heroku',
+            'devicon-docker-plain' : 'Docker',
+            'devicon-php-plain' : 'PHP',
             'fa fa-github' : 'GitHub',
             'fa fa-linkedin-square' : 'LinkedIn',
         },
