@@ -1,9 +1,8 @@
-define([], function () {
+define([], function() {
     "use strict";
 
     window.config = {
-        menu: [
-            {
+        menu: [{
                 name: "home",
                 url: "/#/",
                 text: "Home",
@@ -23,8 +22,7 @@ define([], function () {
             }
         ],
         supportLink: 'https://github.com/learnerbot/learnerbot.github.io/issues',
-        projects: [
-            {
+        projects: [{
                 id: "learnerbot_github_io",
                 repoUrl: "https://github.com/learnerbot/learnerbot.github.io",
                 repoApiUrl: "https://api.github.com/repos/learnerbot/learnerbot.github.io?callback",
@@ -42,7 +40,7 @@ define([], function () {
                 tags: []
             },
             {
-                id: "angular_example",
+                id: "angular",
                 repoUrl: "https://github.com/learnerbot/angular",
                 repoApiUrl: "https://api.github.com/repos/learnerbot/angular?callback",
                 readmeUrl: "https://api.github.com/repos/learnerbot/angular/contents/README.md",
@@ -60,7 +58,7 @@ define([], function () {
                 tags: []
             },
             {
-                id: "spring_boot_example",
+                id: "spring_boot",
                 repoUrl: "https://github.com/learnerbot/spring-boot",
                 repoApiUrl: "https://api.github.com/repos/learnerbot/spring-boot?callback",
                 readmeUrl: "https://api.github.com/repos/learnerbot/spring-boot/contents/README.md",
@@ -76,7 +74,7 @@ define([], function () {
                 tags: ['Sping Boot', 'Thymeleaf']
             },
             {
-                id: "spring_boot_security_example",
+                id: "spring_boot_security",
                 repoUrl: "https://github.com/learnerbot/spring-boot-security",
                 repoApiUrl: "https://api.github.com/repos/learnerbot/spring-boot-security?callback",
                 readmeUrl: "https://api.github.com/repos/learnerbot/spring-boot-security/contents/README.md",
@@ -92,7 +90,7 @@ define([], function () {
                 tags: ['Sping Boot', 'Thymeleaf']
             },
             {
-                id: "spring_boot_mongodb_example",
+                id: "spring_boot_mongodb",
                 repoUrl: "https://github.com/learnerbot/spring-boot-mongodb",
                 repoApiUrl: "https://api.github.com/repos/learnerbot/spring-boot-mongodb?callback",
                 readmeUrl: "https://api.github.com/repos/learnerbot/spring-boot-mongodb/contents/README.md",
@@ -109,7 +107,7 @@ define([], function () {
                 tags: ['Sping Boot', 'Thymeleaf']
             },
             {
-                id: "spring_dynamic_language_support_example",
+                id: "spring_dynamic_language_support",
                 repoUrl: "https://github.com/learnerbot/spring-dynamic-language-support",
                 repoApiUrl: "https://api.github.com/repos/learnerbot/spring-dynamic-language-support?callback",
                 readmeUrl: "https://api.github.com/repos/learnerbot/spring-dynamic-language-support/contents/README.md",
@@ -125,7 +123,7 @@ define([], function () {
                 tags: ['Sping Boot', 'Groovy', 'Thymeleaf']
             },
             {
-                id: "selenium_example",
+                id: "selenium",
                 repoUrl: "https://github.com/learnerbot/selenium",
                 repoApiUrl: "https://api.github.com/repos/learnerbot/selenium?callback",
                 readmeUrl: "https://api.github.com/repos/learnerbot/selenium/contents/README.md",
@@ -142,7 +140,7 @@ define([], function () {
                 tags: ['Sping Boot', 'Thymeleaf']
             },
             {
-                id: "d3js_example",
+                id: "d3js",
                 repoUrl: "https://github.com/learnerbot/d3js",
                 repoApiUrl: "https://api.github.com/repos/learnerbot/d3js?callback",
                 readmeUrl: "https://api.github.com/repos/learnerbot/d3js/contents/README.md",
@@ -161,7 +159,7 @@ define([], function () {
                 tags: []
             },
             {
-                id: "nodejs_example",
+                id: "nodejs",
                 repoUrl: "https://github.com/learnerbot/nodejs",
                 repoApiUrl: "https://api.github.com/repos/learnerbot/nodejs?callback",
                 readmeUrl: "https://api.github.com/repos/learnerbot/nodejs/contents/README.md",
@@ -176,7 +174,7 @@ define([], function () {
                 tags: []
             },
             {
-                id: "nodejs_handlebars_example",
+                id: "nodejs_handlebars",
                 repoUrl: "https://github.com/learnerbot/nodejs-handlebars",
                 repoApiUrl: "https://api.github.com/repos/learnerbot/nodejs-handlebars?callback",
                 readmeUrl: "https://api.github.com/repos/learnerbot/nodejs-handlebars/contents/README.md",
@@ -235,32 +233,61 @@ define([], function () {
                     'devicon-heroku-plain',
                 ],
                 tags: ['Composer']
+            },
+            {
+                id: "php_in_docker",
+                repoUrl: "https://github.com/learnerbot/php-in-docker",
+                repoApiUrl: "https://api.github.com/repos/learnerbot/php-in-docker?callback",
+                readmeUrl: "https://api.github.com/repos/learnerbot/php-in-docker/contents/README.md",
+                title: "PHP in Docker",
+                description: "This is a simple example to run *PHP* via *Composer* inside *Docker*.",
+                mainLanguageType: 'devicon-php-plain',
+                iconTags: [
+                    'devicon-php-plain',
+                    'devicon-docker-plain',
+                ],
+                tags: ['Composer']
+            },
+            {
+                id: "java_in_docker",
+                repoUrl: "https://github.com/learnerbot/java-in-docker",
+                repoApiUrl: "https://api.github.com/repos/learnerbot/java-in-docker?callback",
+                readmeUrl: "https://api.github.com/repos/learnerbot/java-in-docker/contents/README.md",
+                title: "Java in Docker",
+                description: "This is a simple example to run *Java* via *Gradle* inside *Docker*.",
+                mainLanguageType: 'devicon-java-plain-wordmark',
+                iconTags: [
+                    'devicon-java-plain',
+                    'devicon-gradle-plain',
+                    'devicon-docker-plain',
+                ],
+                tags: []
             }
         ],
         iconTooltips: {
-            'devicon-java-plain' : 'Java',
-            'devicon-java-plain-wordmark' : 'Java',
-            'devicon-gradle-plain' : 'Gradle',
-            'devicon-cucumber-plain' : 'Cucumber',
-            'devicon-javascript-plain' : 'JavaScript',
-            'devicon-d3js-plain' : 'D3JS',
-            'devicon-angularjs-plain' : 'AngularJS',
-            'devicon-grunt-plain' : 'Grunt',
-            'devicon-bower-plain' : 'Bower',
-            'devicon-jquery-plain' : 'JQuery',
-            'devicon-nodejs-plain' : 'NodeJS',
-            'devicon-express-original' : 'Express',
-            'devicon-bootstrap-plain' : 'Bootstrap',
-            'devicon-mongodb-plain' : 'MongoDB',
-            'devicon-wordpress-plain' : 'WordPress',
-            'devicon-laravel-plain' : 'Laravel',
-            'devicon-heroku-plain' : 'Heroku',
-            'devicon-docker-plain' : 'Docker',
-            'devicon-php-plain' : 'PHP',
-            'fa fa-github' : 'GitHub',
-            'fa fa-linkedin-square' : 'LinkedIn',
+            'devicon-java-plain': 'Java',
+            'devicon-java-plain-wordmark': 'Java',
+            'devicon-gradle-plain': 'Gradle',
+            'devicon-cucumber-plain': 'Cucumber',
+            'devicon-javascript-plain': 'JavaScript',
+            'devicon-d3js-plain': 'D3JS',
+            'devicon-angularjs-plain': 'AngularJS',
+            'devicon-grunt-plain': 'Grunt',
+            'devicon-bower-plain': 'Bower',
+            'devicon-jquery-plain': 'JQuery',
+            'devicon-nodejs-plain': 'NodeJS',
+            'devicon-express-original': 'Express',
+            'devicon-bootstrap-plain': 'Bootstrap',
+            'devicon-mongodb-plain': 'MongoDB',
+            'devicon-wordpress-plain': 'WordPress',
+            'devicon-laravel-plain': 'Laravel',
+            'devicon-heroku-plain': 'Heroku',
+            'devicon-docker-plain': 'Docker',
+            'devicon-php-plain': 'PHP',
+            'fa fa-github': 'GitHub',
+            'fa fa-linkedin-square': 'LinkedIn',
         },
-        projectsViewChunkSize : 2,
+        projectsViewChunkSize: 2,
         welcomeCode: {
             base: "src/content/welcome_code/",
             type: [
