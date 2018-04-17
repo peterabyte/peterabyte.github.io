@@ -33,7 +33,6 @@ define([], function() {
                 iconTags: [
                     'devicon-javascript-plain',
                     'devicon-angularjs-plain',
-                    'devicon-grunt-plain',
                     'devicon-jquery-plain',
                     'devicon-bootstrap-plain',
                 ],

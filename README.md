@@ -28,11 +28,7 @@ The following libraries are used for the development of this project.
 
 *[npm](https://www.npmjs.com/)*: Package manager.
 
-*[grunt](http://gruntjs.com/)*: JavaScript task runner.
-
-*[karma](http://karma-runner.github.io)*: Test runner for JavaScript.
-
-*[Protractor](https://angular.github.io/protractor/#/)*: Protractor is an end-to-end test framework for AngularJS applications.
+*[TestCafé](https://devexpress.github.io/testcafe/)*: A Node.js tool to automate end-to-end web testing.
 
 ## How to...
 
@@ -42,59 +38,24 @@ The following libraries are used for the development of this project.
 
 ### Start
 
-You can start the app with one of the following commands.
+You can start the web application with the following command.
 
-```
-grunt
-grunt dev
-```
+`npm start`
 
 ### Test
 
-Run unit tests.
+Run end-2-end tests on the local working environment.
 
-`grunt unit`
+`npm test`
 
-Run end-2-end tests on local working environment.
+OR
 
-`grunt e2e`
+`npm test -- --env=local`
 
-Run end-2-end tests on live environment.
+Run end-2-end tests on the live environment.
 
-`grunt e2eprod`
+`npm test -- --env=prod`
 
 ### Add a new project
 
 Update the *src/script/config.js* file with the new project. Add it to the list of *projects* so that it will be available on **learnerbot.github.io**. 
-
-Update the *test/protractor.conf.js* file with the new project. Add it to the list of *projects.idList* so that e2e tests will run for this new project as well.
-
-## Common pitfalls
-
-Here are some pitfalls I encountered during development.
-
-### Missing selenium-webdriver
-
-**Issue**:
-
-```
-Error: No selenium server jar found at the specified location (learnerbot.github.io.git\node_modules\protractor\selenium\selenium-server-standalone-2.45.0.jar). Check that the version number is up to date.
-    at LocalDriverProvider.addDefaultBinaryLocs_ (learnerbot.github.io.git\node_modules\protractor\lib\driverProviders\local.js:37:11)
-    at LocalDriverProvider.setupEnv (learnerbot.github.io.git\node_modules\protractor\lib\driverProviders\local.js:71:8)
-    at Runner.run (learnerbot.github.io.git\node_modules\protractor\lib\runner.js:254:31)
-    at TaskRunner.run (learnerbot.github.io.git\node_modules\protractor\lib\taskRunner.js:123:19)
-    at createNextTaskRunner (learnerbot.github.io.git\node_modules\protractor\lib\launcher.js:220:20)
-    at learnerbot.github.io.git\node_modules\protractor\lib\launcher.js:243:7
-    at _fulfilled (learnerbot.github.io.git\node_modules\protractor\node_modules\q\q.js:797:54)
-    at self.promiseDispatch.done (learnerbot.github.io.git\node_modules\protractor\node_modules\q\q.js:826:30)
-    at Promise.promise.promiseDispatch (learnerbot.github.io.git\node_modules\protractor\node_modules\q\q.js:759:13)
-    at learnerbot.github.io.git\node_modules\protractor\node_modules\q\q.js:573:44
-```
-
-**Solution**:
-
-Run the following command in terminal in the project root folder.
-
-```
-./node_modules/protractor/bin/webdriver-manager update
-```
