@@ -28,7 +28,7 @@ The following libraries are used for the development of this project.
 
 *[npm](https://www.npmjs.com/)*: Package manager.
 
-*[TestCafé](https://devexpress.github.io/testcafe/)*: A Node.js tool to automate end-to-end web testing.
+*[TestCafe](https://devexpress.github.io/testcafe/)*: A Node.js tool to automate end-to-end web testing.
 
 ## How to...
 
