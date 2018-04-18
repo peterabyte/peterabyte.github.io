@@ -4,8 +4,11 @@
   "description": "Single Page Application hosted on GitHub which holds a reference to some of my pet projects.",
   "url": "http://learnerbot.github.io",
   "developedBy": "LearnerBot",
+  "config": {
+    "test-browser": "chrome"
+  },
   "scripts": {
-    "test": "testcafe chrome testcafe",
+    "test": "testcafe $npm_package_config_test_browser testcafe",
     "start": "http-server -p 11001"
   },
   "repository": {

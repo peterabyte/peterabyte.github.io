@@ -11,12 +11,12 @@
         <div class="row tech-radar">
             <h2 class="section-header">Technologies</h2>
             <p>
-            <div class="techs">
-                <span ng-repeat="techWithIcon in techsWithIcon"><span class="{{ techWithIcon }}" data-render-icon-tooltip></span> </span>
-            </div>
-            <div class="techs">
-                <span ng-repeat="tech in techsWithoutIcon"><span class="label label-default">{{ tech }}</span> </span>
-            </div>
+                <div class="techs">
+                    <span ng-repeat="techWithIcon in techsWithIcon"><span class="{{ techWithIcon }}" data-render-icon-tooltip></span> </span>
+                </div>
+                <div class="techs">
+                    <span ng-repeat="tech in techsWithoutIcon"><span class="label label-default">{{ tech }}</span> </span>
+                </div>
             </p>
         </div>
     </section>
@@ -32,7 +32,7 @@
         <h2 class="section-header">Projects</h2>
         <div class="row row-eq-height" ng-repeat="projectsList in slicedProjects" data-done>
             <div class="col-sm-{{12 / chunkSize}} project-description project-{{ ($parent.$index % 2 == 0) ? 'evenrow' : 'oddrow' }}-{{ ($index % 2 == 0) ? 'evencol' : 'oddcol' }}" ng-repeat="project in projectsList" data-done>
-                <h3><span ng-if="project.mainLanguageType" class="{{ project.mainLanguageType }}" data-render-icon-tooltip></span> <a href="/#/projects/{{project.id}}">{{project.title}}</a></h3>
+                <h3><span ng-if="project.mainLanguageType" class="{{ project.mainLanguageType }}" data-render-icon-tooltip></span> <a class="project-item-title" data-project-id="{{project.id}}" href="/#/projects/{{project.id}}">{{project.title}}</a></h3>
                 <p data-project-id="{{project.id}}" data-render-project-description></p>
                 <p>
                     <strong>Tech: </strong>
@@ -40,9 +40,9 @@
                     <span ng-repeat="tag in project.tags"><span class="label label-default">{{ tag }}</span> </span>
                 </p>
                 <p>
-                    <a href="/#/projects/{{project.id}}">Read more</a> or <a target="_blank" href="{{project.repoUrl}}">go to source <i class="fa fa-github" area-hidden="true" data-render-icon-tooltip></i></a>
+                    <a class="project-item-read-more" data-project-id="{{project.id}}" href="/#/projects/{{project.id}}">Read more</a> or <a class="project-item-goto-source" data-project-id="{{project.id}}" target="_blank" href="{{project.repoUrl}}">go to source <i class="fa fa-github" area-hidden="true" data-render-icon-tooltip></i></a>
                 </p>
-            <div ng-repeat="project in projectsList" data-done>
-        </div>
+                <div ng-repeat="project in projectsList" data-done>
+                </div>
     </section>
-</div>
+    </div>

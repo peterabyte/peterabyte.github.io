@@ -56,6 +56,12 @@ Run end-2-end tests on the live environment.
 
 `npm test -- --env=prod`
 
+Tests by default are executed using *chrome*. This can be changed via the following command to any browser supported by *TestCafe*.
+
+`npm config set learnerbot-github-io:test-browser firefox`
+
 ### Add a new project
 
 Update the *src/script/config.js* file with the new project. Add it to the list of *projects* so that it will be available on **learnerbot.github.io**. 
+
+Test the new project by adding a new `Project` element to the `projectList` in `testcafe/home-page-model.js`.
