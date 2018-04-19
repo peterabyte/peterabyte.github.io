@@ -6,20 +6,6 @@
             <div class="main-subtitle"><i>Observe it, study it, understand it and let it run free in the Cloud.</i></div>
         </div>
     </section>
-    <a name="techs"></a>
-    <section id="techs">
-        <div class="row tech-radar">
-            <h2 class="section-header">Technologies</h2>
-            <p>
-                <div class="techs">
-                    <span ng-repeat="techWithIcon in techsWithIcon"><span class="{{ techWithIcon }}" data-render-icon-tooltip></span> </span>
-                </div>
-                <div class="techs">
-                    <span ng-repeat="tech in techsWithoutIcon"><span class="label label-default">{{ tech }}</span> </span>
-                </div>
-            </p>
-        </div>
-    </section>
     <a name="about"></a>
     <section id="about">
         <div class="row">
@@ -44,5 +30,19 @@
                 </p>
                 <div ng-repeat="project in projectsList" data-done>
                 </div>
+    </section>
+    <a name="techs"></a>
+    <section id="techs">
+        <div class="row tech-radar">
+            <h2 class="section-header">Technologies</h2>
+            <p>
+                <div class="techs">
+                    <span ng-repeat="techWithIcon in techsWithIcon"><span class="{{ techWithIcon }}" data-render-icon-tooltip></span> </span>
+                </div>
+                <div class="techs">
+                    <span ng-repeat="tech in techsWithoutIcon"><span class="label label-default">{{ tech }}</span> </span>
+                </div>
+            </p>
+        </div>
     </section>
     </div>
