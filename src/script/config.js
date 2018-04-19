@@ -36,7 +36,7 @@ define([], function() {
                     'devicon-jquery-plain',
                     'devicon-bootstrap-plain',
                 ],
-                tags: []
+                tags: ['TestCafe']
             },
             {
                 id: "angular",
