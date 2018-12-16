@@ -1,8 +1,8 @@
-# learnerbot.github.io
+# peterabyte.github.io
 
 ## Overview
 
-The **learnerbot.github.io** project is a *Single Page Application* hosted on GitHub which holds a reference to some of my pet projects. It is based on *AngularJS* and some other JavaScript libraries.
+The **peterabyte.github.io** project is a *Single Page Application* hosted on GitHub which holds a reference to some of my pet projects. It is based on *AngularJS* and some other JavaScript libraries.
 
 ## Dependencies
 
@@ -58,10 +58,10 @@ Run end-2-end tests on the live environment.
 
 Tests by default are executed using *chrome*. This can be changed via the following command to any browser supported by *TestCafe*.
 
-`npm config set learnerbot-github-io:test-browser firefox`
+`npm config set peterabyte-github-io:test-browser firefox`
 
 ### Add a new project
 
-Update the *src/script/config.js* file with the new project. Add it to the list of *projects* so that it will be available on **learnerbot.github.io**. 
+Update the *src/script/config.js* file with the new project. Add it to the list of *projects* so that it will be available on **peterabyte.github.io**. 
 
 Test the new project by adding a new `Project` element to the `projectList` in `testcafe/home-page-model.js`.

@@ -21,7 +21,7 @@ define(['angular',
         $) {
         "use strict";
 
-        var app = angular.module('learnerbot-web', [
+        var app = angular.module('peterabyte-web', [
             'ngRoute',
             'ngSanitize'
         ]);

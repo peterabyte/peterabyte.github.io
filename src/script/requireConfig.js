@@ -10,13 +10,13 @@ require.config({
         main: '../main'
     },
     shim: {
-        'angular' : {'exports' : 'angular'},
+        'angular': { 'exports': 'angular' },
         'angularRoute': ['angular'],
         'angularSanitize': ['angular'],
-        'marked' : {'exports' : 'marked'},
-        'hljs' : {'exports' : 'hljs'},
-        'jquery' : {'exports' : 'jquery'},
-        'bootstrap' : ['jquery']
+        'marked': { 'exports': 'marked' },
+        'hljs': { 'exports': 'hljs' },
+        'jquery': { 'exports': 'jquery' },
+        'bootstrap': ['jquery']
     },
     priority: [
         'angular'
@@ -27,6 +27,6 @@ require.config({
 require(['angular', 'main'], function(angular, main) {
     var $html = angular.element(document.getElementsByTagName('html')[0]);
     angular.element().ready(function() {
-        angular.bootstrap(document, ['learnerbot-web']);
+        angular.bootstrap(document, ['peterabyte-web']);
     });
 });

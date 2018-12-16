@@ -8,7 +8,7 @@ const envConfig = {
         baseUrl: 'http://localhost:11001'
     },
     prod: {
-        baseUrl: 'http://learnerbot.github.io'
+        baseUrl: 'http://peterabyte.github.io'
     }
 };
 

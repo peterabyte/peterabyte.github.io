@@ -18,7 +18,7 @@ export default class Page {
         this.sectionAbout = Selector('#about');
         this.sectionProjects = Selector('#projects');
         this.projectList = [
-            new Project('learnerbot_github_io'),
+            new Project('peterabyte_github_io'),
             new Project('angular'),
             new Project('spring_boot'),
             new Project('spring_boot_security'),

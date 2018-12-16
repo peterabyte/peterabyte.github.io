@@ -9,23 +9,23 @@ const page = new HomePage();
 
 test('Visit Home page', async t => {
     await t
-        .expect(page.title.innerText).eql('LearnerBot - Home');
+        .expect(page.title.innerText).eql('peterabyte - Home');
 });
 
 test('Clickable home menu', async t => {
     await t
         .click(page.menuItemHome)
-        .expect(page.title.innerText).eql('LearnerBot - Home');
+        .expect(page.title.innerText).eql('peterabyte - Home');
 });
 
 test('Clickable about menu', async t => {
     await t
         .click(page.menuItemAbout)
-        .expect(page.title.innerText).eql('LearnerBot - Home');
+        .expect(page.title.innerText).eql('peterabyte - Home');
 });
 
 test('Clickable projects menu', async t => {
     await t
         .click(page.menuItemProjects)
-        .expect(page.title.innerText).eql('LearnerBot - Home');
+        .expect(page.title.innerText).eql('peterabyte - Home');
 });

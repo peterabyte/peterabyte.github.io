@@ -1,9 +1,9 @@
 {
-  "name": "learnerbot-github-io",
+  "name": "peterabyte-github-io",
   "version": "1.0.0",
   "description": "Single Page Application hosted on GitHub which holds a reference to some of my pet projects.",
-  "url": "http://learnerbot.github.io",
-  "developedBy": "LearnerBot",
+  "url": "http://peterabyte.github.io",
+  "developedBy": "peterabyte",
   "config": {
     "test-browser": "chrome"
   },
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/learnerbot/learnerbot.github.io"
+    "url": "https://github.com/peterabyte/peterabyte.github.io"
   },
   "devDependencies": {
     "http-server": "^0.11.1",
