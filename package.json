@@ -4,19 +4,14 @@
   "description": "Single Page Application hosted on GitHub which holds a reference to some of my pet projects.",
   "url": "http://peterabyte.github.io",
   "developedBy": "peterabyte",
-  "config": {
-    "test-browser": "chrome"
-  },
   "scripts": {
-    "test": "testcafe $npm_package_config_test_browser testcafe",
-    "start": "http-server -p 11001"
+    "start": "http-server -a localhost -p 11001"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/peterabyte/peterabyte.github.io"
   },
   "devDependencies": {
-    "http-server": "^0.11.1",
-    "testcafe": "^0.19.2"
+    "http-server": "^0.12.3"
   }
 }

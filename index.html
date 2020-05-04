@@ -1,24 +1,105 @@
 <!DOCTYPE html>
-<html class="no-js" ng-controller="BasePageCtrl">
+<html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-    <title ng-bind="'peterabyte - ' + title">peterabyte</title>
+    <title>peterabyte</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="src/picture/learnerbot_icon_16x16.ico" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/styles/default.min.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
-    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-    <link rel="stylesheet" href="src/css/main.css" />
+    <link rel="shortcut icon" href="src/picture/peterabyte_icon_16x16.ico" />
+     
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" rel="stylesheet" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+
+    <link href="src/css/main.css" rel="stylesheet" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js" integrity="sha256-fTuUgtT7O2rqoImwjrhDgbXTKUwyxxujIMRIK7TbuNU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js" integrity="sha256-usTqAE1ywvdMtksWzdeWzD75MsfJN0h0U7y2NtZL3N0=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/1.0.0/marked.min.js" integrity="sha256-JUIJCIbiDdnT6IGIU/ZbydNyumUIMsEelMTrSfDb1Sc=" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.3/require.min.js" data-main="src/script/requireConfig.js"></script>
-    <div ng-include="'src/view/template/header.html'" ng-controller="HeaderHelperCtrl" class="main-container"></div>
-    <div ng-include="'src/view/template/errorHeader.html'" ng-controller="ErrorHelperCtrl" class="main-container"></div>
-    <div ng-view class="main-container"></div>
-    <div ng-include="'src/view/template/footer.html'" ng-controller="FooterHelperCtrl" class="main-container"></div>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <a class="navbar-brand" href="/"><img src="/src/picture/peterabyte_icon_24x24.png" alt="peterabyte logo"> peterabyte</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#headerMenu" aria-controls="headerMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="headerMenu">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/peterabyte"><span class="fab fa-github"></span> GitHub</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects"><span class="fa fa-cog"></span> Projects <span id="numOfProjectsText"></span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p><h2 class="main-catchphrase text-dark text-center"><i>Observe, study, understand and let IT run free in the cloud <span class="fa fa-cloud text-primary"></span></i></h2></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <a name="about"></a>
+                <section id=about>
+                    <h2 class="section-header">About</h2>
+                    <p>I’m Gergő Péter Nagy, software developer scientist. As a good scientist I always experiment with new techniques and technologies to sharpen my skills. Here you can find some of my pet projects and experiments.</p>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <a name="projects"></a>
+    <section id="projects">
+        <div id="projectsContainer" class="container">
+        </div>
+    </section>
+
+    <div class="container-fluid text-center">
+        <hr>
+        <h2>
+            <span>
+                <a href="https://hu.linkedin.com/in/gergopeternagy"><i class="fab fa-linkedin" area-hidden="true"></i></a>
+            </span>
+            <span>
+                <a href="https://github.com/peterabyte"><i class="fab fa-github-square" area-hidden="true"></i></a>
+            </span>
+        </h2>
+    </div>
+
+    <script id="numOfProjectsTemplate" type="text/x-custom-template">
+        <span class="badge badge-dark">{{numOfProjects}}</span>
+    </script>
+
+    <script id="projectTemplate" type="text/x-custom-template">
+        <div class="project-item row {{projectClass}}">
+            <div class="col">
+                <h3><span class="{{mainLanguageIcon}}" data-toggle="tooltip" data-placement="top" title="{{mainLanguageTooltip}}" ></span> <a href="{{gitHubUrl}}" class="text-info">{{title}}</a></h3>
+                <div class="project-item-description">{{{description}}}</div>
+                <div>
+                    <span class="text-muted">Tech: </span>{{{techs}}}
+                </div>
+                <div>
+                    
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script id="techIconTemplate" type="text/x-custom-template">
+        <span class="{{techIcon}}" data-toggle="tooltip" data-placement="bottom" title="{{techIconTooltip}}"></span>
+    </script>
+
+    <script id="techBadgeTemplate" type="text/x-custom-template">
+        <span class="tech-badge badge badge-dark" data-toggle="tooltip" data-placement="bottom" title="{{techBadgeTooltip}}">{{techBadge}}</span>
+    </script>
+
+    <script src="src/script/main.js"></script>
 </body>
 
 </html>
