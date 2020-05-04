@@ -16,7 +16,7 @@ The following libraries are used in the application.
 
 *[Bootstrap](http://getbootstrap.com/)*: HTML, CSS and JS framework for developing responsive, mobile first projects on the web.
 
-*[Devicon](https://konpa.github.io/devicon/)*: Devicon is a set of icons representing programming languages, designing & development tools.
+*[Font Awesome](https://fontawesome.com/)*: The web's most popular icon set and toolkit.
 
 *[marked](https://github.com/chjj/marked)*: A full-featured markdown parser and compiler, written in JavaScript. Built for speed.
 
