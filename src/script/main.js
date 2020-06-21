@@ -17,9 +17,9 @@ $(document).ready(function() {
                 techBadges: ['Sping Boot', 'Gradle', 'Thymeleaf', 'Selenium']
             },
             {
-                id: "spring_dynamic_language_support",
-                gitHubUrl: "https://github.com/peterabyte/spring-dynamic-language-support",
-                title: "Spring Dynamic Language Support",
+                id: "spring_scripting",
+                gitHubUrl: "https://github.com/peterabyte/spring-scripting",
+                title: "Spring Scripting",
                 description: "This is a simple web application based on *Spring Boot* to understand the basics of **Spring Dynamic Language Support**.",
                 mainLanguageIcon: 'fab fa-java',
                 techBadges: ['Sping Boot', 'Groovy']
