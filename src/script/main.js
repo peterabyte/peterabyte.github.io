@@ -28,7 +28,7 @@ $(document).ready(function() {
                 id: "d3js",
                 gitHubUrl: "https://github.com/peterabyte/d3js",
                 title: "D3.js",
-                description: "This is a simple web application powered by *AngularJS* to understand the basics of **D3.js**.",
+                description: "This is a simple web application to understand the basics of **D3.js**.",
                 mainLanguageIcon: 'fab fa-js',
                 techBadges: ['D3.js']
             },
