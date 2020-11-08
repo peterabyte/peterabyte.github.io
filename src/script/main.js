@@ -25,6 +25,14 @@ $(document).ready(function() {
                 techBadges: ['Sping Boot', 'Groovy']
             },
             {
+                id: "antlr",
+                gitHubUrl: "https://github.com/peterabyte/hello-antlr",
+                title: "ANTLR",
+                description: "This is simple example to understand the basics of **ANTLR**.",
+                mainLanguageIcon: 'fab fa-java',
+                techBadges: ['ANTLR']
+            },
+            {
                 id: "d3js",
                 gitHubUrl: "https://github.com/peterabyte/d3js",
                 title: "D3.js",
