@@ -2,7 +2,7 @@
 
 ## Overview
 
-The **peterabyte.github.io** project is a *Single Page Application* hosted on GitHub which holds a reference to some of my pet projects and experiments.
+The **peterabyte.github.io** project is a *Single Page Application* hosted on GitHub which holds references to some of my pet projects and experiments.
 
 ## Dependencies
 
@@ -25,8 +25,6 @@ The following libraries are used in the application.
 The following libraries are used for the development of this project.
 
 *[npm](https://www.npmjs.com/)*: Package manager.
-
-*[TestCafe](https://devexpress.github.io/testcafe/)*: A Node.js tool to automate end-to-end web testing.
 
 ## How to...
 
