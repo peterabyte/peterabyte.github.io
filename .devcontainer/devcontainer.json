@@ -1,0 +1,12 @@
+{
+    "name": "nodejs",
+    // more info: https://containers.dev/templates
+    "image": "mcr.microsoft.com/devcontainers/javascript-node:4.0.2",
+
+    // more info: https://containers.dev/features.
+    "features": {
+      "ghcr.io/devcontainers-contrib/features/jshint:2": {}
+    },
+    
+    "forwardPorts": [11001]
+}
