@@ -1,7 +1,7 @@
 {
     "name": "nodejs",
     // more info: https://containers.dev/templates
-    "image": "mcr.microsoft.com/devcontainers/javascript-node:4.0.2",
+    "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
 
     // more info: https://containers.dev/features.
     "features": {
